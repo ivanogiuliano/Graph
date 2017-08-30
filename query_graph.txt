@@ -1,0 +1,3 @@
+SELECT X.id AS Nodes_X,Y.id AS Nodes_Y,X.weight AS Weight,    shortestline (X.geometry,Y.geometry) AS geom
+FROM Nodes X INNER JOIN Nodes Y ON (X.id < Y.id)
+WHERE X.weight = Y.weight
